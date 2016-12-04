@@ -1,0 +1,72 @@
+{
+  "MiniTest": {
+    "coverage": {
+    },
+    "timestamp": 1480846673
+  },
+  "Unit Tests": {
+    "coverage": {
+      "/Users/blackknight_75/turing/1611/1module/projects/jungle-beats/lib/jungle_beat.rb": [
+        1,
+        1,
+        1,
+        7,
+        7,
+        7,
+        7,
+        null,
+        null,
+        1,
+        6,
+        5,
+        5,
+        5,
+        5,
+        null,
+        1,
+        null,
+        6,
+        null,
+        null,
+        1,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/blackknight_75/turing/1611/1module/projects/jungle-beats/lib/node.rb": [
+        1,
+        1,
+        1,
+        1,
+        6,
+        6,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1480881534
+  }
+}
