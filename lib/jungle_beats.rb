@@ -21,6 +21,6 @@ class JungleBeat
   end
 
   def play
-    `say -r 500 -v Boing "#{@list.to_string}"`
+    `say -r 40 -v Daniel #{@list.to_string}`
   end
 end

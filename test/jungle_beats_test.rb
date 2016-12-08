@@ -47,9 +47,12 @@ class JungleBeatTest < Minitest::Test
 
   def test_can_play_jungle_beat_list
     jb = JungleBeat.new
-    assert_equal nil, jb.list.head
-    jb.append("deep doo ditt")
+    jb.append("Hello Ilana. Welcome to Daniel's Jungle Beats project.
+              please have a look and tell him what you think.
+              Are you ready to evaluate me? Please be gentle as I have a lot
+              of complex moving parts. Let's do this!")
+    # jb.append("deep doo ditt deep doo ditt woo hoo shudeep doo ditt woo hoo ")
     jb.play
-    assert_equal 3, jb.count
+    assert_equal 39, jb.count
   end
 end
