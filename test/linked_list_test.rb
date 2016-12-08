@@ -89,5 +89,38 @@ class LinkedListTest < Minitest::Test
     assert_equal "plop suu woo yu", list.to_string
   end
 
+  def test_can_pop_node_off_back
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.append("yu")
+    assert_equal "woo", list.insert(2, "woo")
+    assert_equal "plop suu woo yu", list.to_string
+    assert_equal "yu", list.pop
+    assert_equal "plop suu woo", list.to_string
+  end
 
+  def test_check_if_list_includes_node
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.append("yu")
+    assert_equal true, list.include?("yu")
+    assert_equal false, list.include?("do")
+  end
+
+  def test_can_find_node_data
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.append("yu")
+    list.append("swe")
+    list.append("beep")
+    list.append("bop")
+    list.append("flop")
+    list.append("dop")
+    assert_equal "yu", list.find(2,1)
+    assert_equal "yu, swe, beep", list.find(2, 3)
+    assert_equal "yu, swe, beep, bop, flop", list.find(2, 5)
+  end
 end

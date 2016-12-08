@@ -2,6 +2,7 @@ class LinkedList
   attr_reader :head
   def initialize
     @head = nil
+    @return_value = false
   end
 
   def append(data)
@@ -41,14 +42,10 @@ class LinkedList
     (position - 1).times do
       current = current.next_node
     end
-    # create a new node
     node = Node.new(input_beat)
-    # create a temporary thing for the end of the chain to hold on to
     end_of_chain = current.next_node
     current.next_node = node
-    # attach new node to end of current position
     node.next_node = end_of_chain
-    # reattach end of the rest of the chain
     input_beat
   end
 
@@ -73,6 +70,35 @@ class LinkedList
     beat_list.join(" ")
   end
 
-  def add_beat_to_list(input_node)
+  def pop
+    @current = @head
+    poped_beat = []
+    until @current.next_node.next_node == nil
+      @current = @current.next_node
+    end
+      poped_beat << @current.next_node.data
+      @current.next_node = nil
+      poped_beat[0]
+  end
+
+  def include?(incoming_data)
+    @return_value = false
+    current_list = self.to_string.split
+      current_list.each do |beat|
+        if beat == incoming_data
+          @return_value = true
+        elsif beat != incoming_data
+        end
+      end
+    @return_value
+  end
+
+  def find(index, chain)
+    current_list = self.to_string.split
+    if chain == 1
+    found_beats = current_list[index]
+    else
+    found_beats = current_list[index..(chain + 1)].join(", ")
+    end
   end
 end
